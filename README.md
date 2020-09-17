@@ -172,7 +172,7 @@ Then, you'll be able to iterate through it and call a subscript operator:
 
 ```Swift
 
-let arrayProxy = ArraryOfProxies()
+let arrayProxy = ArrayOfProxies()
 
 for (proxy in arrayProxy) {
     // proxy here is of type 'ExampleProxy'
