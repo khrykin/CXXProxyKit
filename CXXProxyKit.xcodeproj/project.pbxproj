@@ -7,28 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51CAEE5B250F8DEF00A2D9DD /* CXXProxyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CAEE51250F8DEF00A2D9DD /* CXXProxyKit.framework */; };
-		51CAEE60250F8DEF00A2D9DD /* CXXProxyKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CAEE5F250F8DEF00A2D9DD /* CXXProxyKitTests.m */; };
+		5192EB8B251288110022FE0F /* CXXMutableProxyObjectTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */; };
+		5192EB922513D48E0022FE0F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5192EB912513D48E0022FE0F /* LICENSE */; };
+		51A5C7912510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51A5C7922510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51A5C7942510C42C008B1610 /* CXXProxyPtrTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */; };
+		51A5C79F2511010E008B1610 /* CXXExampleProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51A5C79D2511010E008B1610 /* CXXExampleProxy.mm */; };
 		51CAEE62250F8DEF00A2D9DD /* CXXProxyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAEE54250F8DEF00A2D9DD /* CXXProxyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51CAEE89250F904C00A2D9DD /* CXXProxyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAEE87250F904C00A2D9DD /* CXXProxyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51CAEE8A250F904C00A2D9DD /* CXXProxyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAEE87250F904C00A2D9DD /* CXXProxyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51CAEE8D250F959700A2D9DD /* CXXProxyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CAEE54250F8DEF00A2D9DD /* CXXProxyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51CAEE9C250F9EB700A2D9DD /* CXXProxyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CAEE70250F8EDA00A2D9DD /* CXXProxyKit.framework */; };
+		51FD1197250FA393008953B8 /* CXXProxyObjectTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51FD1196250FA393008953B8 /* CXXProxyObjectTests.mm */; };
+		51FD119D250FA6CB008953B8 /* CXXProxyArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51FD1198250FA6CB008953B8 /* CXXProxyArray.mm */; };
+		51FD119E250FA6CB008953B8 /* CXXProxyArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51FD1198250FA6CB008953B8 /* CXXProxyArray.mm */; };
+		51FD11A3250FA6CB008953B8 /* CXXProxyArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 51FD119B250FA6CB008953B8 /* CXXProxyArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51FD11A4250FA6CB008953B8 /* CXXProxyArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 51FD119B250FA6CB008953B8 /* CXXProxyArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51FD11A8250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51FD11A7250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		51CAEE5C250F8DEF00A2D9DD /* PBXContainerItemProxy */ = {
+		51CAEE9D250F9EB700A2D9DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51CAEE48250F8DEF00A2D9DD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 51CAEE50250F8DEF00A2D9DD;
-			remoteInfo = CXXProxyKit;
+			remoteGlobalIDString = 51CAEE6F250F8EDA00A2D9DD;
+			remoteInfo = CXXProxyKitMacOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXMutableProxyObjectTests.mm; sourceTree = "<group>"; };
+		5192EB8D2513CF4E0022FE0F /* version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = version.sh; sourceTree = "<group>"; };
+		5192EB902513D2460022FE0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5192EB912513D48E0022FE0F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		51A5C7902510C091008B1610 /* CXXProxyPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXProxyPtr.h; sourceTree = "<group>"; };
+		51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXProxyPtrTests.mm; sourceTree = "<group>"; };
+		51A5C79B2511010E008B1610 /* cxx_example_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cxx_example_object.h; sourceTree = "<group>"; };
+		51A5C79C2511010E008B1610 /* CXXExampleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXExampleProxy.h; sourceTree = "<group>"; };
+		51A5C79D2511010E008B1610 /* CXXExampleProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXExampleProxy.mm; sourceTree = "<group>"; };
 		51CAEE51250F8DEF00A2D9DD /* CXXProxyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CXXProxyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CAEE54250F8DEF00A2D9DD /* CXXProxyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXProxyKit.h; sourceTree = "<group>"; };
 		51CAEE55250F8DEF00A2D9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51CAEE5A250F8DEF00A2D9DD /* CXXProxyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXXProxyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		51CAEE5F250F8DEF00A2D9DD /* CXXProxyKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXXProxyKitTests.m; sourceTree = "<group>"; };
-		51CAEE61250F8DEF00A2D9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CAEE70250F8EDA00A2D9DD /* CXXProxyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CXXProxyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CAEE73250F8EDA00A2D9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CAEE87250F904C00A2D9DD /* CXXProxyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXProxyObject.h; sourceTree = "<group>"; };
+		51CAEE97250F9EB700A2D9DD /* CXXProxyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXXProxyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CAEEA6250F9FD300A2D9DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51FD1196250FA393008953B8 /* CXXProxyObjectTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXProxyObjectTests.mm; sourceTree = "<group>"; };
+		51FD1198250FA6CB008953B8 /* CXXProxyArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXProxyArray.mm; sourceTree = "<group>"; };
+		51FD119B250FA6CB008953B8 /* CXXProxyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXProxyArray.h; sourceTree = "<group>"; };
+		51FD11A7250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXNonOwningProxyArrayTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,22 +68,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CAEE57250F8DEF00A2D9DD /* Frameworks */ = {
+		51CAEE6D250F8EDA00A2D9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51CAEE5B250F8DEF00A2D9DD /* CXXProxyKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CAEE94250F9EB700A2D9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CAEE9C250F9EB700A2D9DD /* CXXProxyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5192EB8C2513CF260022FE0F /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				5192EB8D2513CF4E0022FE0F /* version.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		51A5C7982510F8E9008B1610 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				51A5C79B2511010E008B1610 /* cxx_example_object.h */,
+				51A5C79C2511010E008B1610 /* CXXExampleProxy.h */,
+				51A5C79D2511010E008B1610 /* CXXExampleProxy.mm */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		51CAEE47250F8DEF00A2D9DD = {
 			isa = PBXGroup;
 			children = (
+				5192EB912513D48E0022FE0F /* LICENSE */,
+				5192EB902513D2460022FE0F /* README.md */,
+				5192EB8C2513CF260022FE0F /* Scripts */,
 				51CAEE53250F8DEF00A2D9DD /* CXXProxyKit */,
 				51CAEE5E250F8DEF00A2D9DD /* CXXProxyKitTests */,
+				51CAEE71250F8EDA00A2D9DD /* CXXProxyKitMacOS */,
 				51CAEE52250F8DEF00A2D9DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				51CAEE51250F8DEF00A2D9DD /* CXXProxyKit.framework */,
-				51CAEE5A250F8DEF00A2D9DD /* CXXProxyKitTests.xctest */,
+				51CAEE70250F8EDA00A2D9DD /* CXXProxyKit.framework */,
+				51CAEE97250F9EB700A2D9DD /* CXXProxyKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +130,12 @@
 		51CAEE53250F8DEF00A2D9DD /* CXXProxyKit */ = {
 			isa = PBXGroup;
 			children = (
-				51CAEE54250F8DEF00A2D9DD /* CXXProxyKit.h */,
 				51CAEE55250F8DEF00A2D9DD /* Info.plist */,
+				51CAEE54250F8DEF00A2D9DD /* CXXProxyKit.h */,
+				51CAEE87250F904C00A2D9DD /* CXXProxyObject.h */,
+				51FD119B250FA6CB008953B8 /* CXXProxyArray.h */,
+				51FD1198250FA6CB008953B8 /* CXXProxyArray.mm */,
+				51A5C7902510C091008B1610 /* CXXProxyPtr.h */,
 			);
 			path = CXXProxyKit;
 			sourceTree = "<group>";
@@ -80,10 +143,22 @@
 		51CAEE5E250F8DEF00A2D9DD /* CXXProxyKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				51CAEE5F250F8DEF00A2D9DD /* CXXProxyKitTests.m */,
-				51CAEE61250F8DEF00A2D9DD /* Info.plist */,
+				5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */,
+				51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */,
+				51FD1196250FA393008953B8 /* CXXProxyObjectTests.mm */,
+				51FD11A7250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm */,
+				51CAEEA6250F9FD300A2D9DD /* Info.plist */,
+				51A5C7982510F8E9008B1610 /* Support */,
 			);
 			path = CXXProxyKitTests;
+			sourceTree = "<group>";
+		};
+		51CAEE71250F8EDA00A2D9DD /* CXXProxyKitMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				51CAEE73250F8EDA00A2D9DD /* Info.plist */,
+			);
+			path = CXXProxyKitMacOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +168,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A5C7912510C091008B1610 /* CXXProxyPtr.h in Headers */,
+				51CAEE89250F904C00A2D9DD /* CXXProxyObject.h in Headers */,
+				51FD11A3250FA6CB008953B8 /* CXXProxyArray.h in Headers */,
 				51CAEE62250F8DEF00A2D9DD /* CXXProxyKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CAEE6B250F8EDA00A2D9DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A5C7922510C091008B1610 /* CXXProxyPtr.h in Headers */,
+				51CAEE8D250F959700A2D9DD /* CXXProxyKit.h in Headers */,
+				51FD11A4250FA6CB008953B8 /* CXXProxyArray.h in Headers */,
+				51CAEE8A250F904C00A2D9DD /* CXXProxyObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +197,7 @@
 				51CAEE4D250F8DEF00A2D9DD /* Sources */,
 				51CAEE4E250F8DEF00A2D9DD /* Frameworks */,
 				51CAEE4F250F8DEF00A2D9DD /* Resources */,
+				5192EB8E2513CF6F0022FE0F /* Set Version From Git */,
 			);
 			buildRules = (
 			);
@@ -118,22 +208,41 @@
 			productReference = 51CAEE51250F8DEF00A2D9DD /* CXXProxyKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		51CAEE59250F8DEF00A2D9DD /* CXXProxyKitTests */ = {
+		51CAEE6F250F8EDA00A2D9DD /* CXXProxyKitMacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51CAEE68250F8DEF00A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitTests" */;
+			buildConfigurationList = 51CAEE81250F8EDA00A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitMacOS" */;
 			buildPhases = (
-				51CAEE56250F8DEF00A2D9DD /* Sources */,
-				51CAEE57250F8DEF00A2D9DD /* Frameworks */,
-				51CAEE58250F8DEF00A2D9DD /* Resources */,
+				51CAEE6B250F8EDA00A2D9DD /* Headers */,
+				51CAEE6C250F8EDA00A2D9DD /* Sources */,
+				51CAEE6D250F8EDA00A2D9DD /* Frameworks */,
+				51CAEE6E250F8EDA00A2D9DD /* Resources */,
+				5192EB8F2513CFBB0022FE0F /* Set Version From Git */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				51CAEE5D250F8DEF00A2D9DD /* PBXTargetDependency */,
+			);
+			name = CXXProxyKitMacOS;
+			productName = CXXProxyKitMacOS;
+			productReference = 51CAEE70250F8EDA00A2D9DD /* CXXProxyKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51CAEE96250F9EB700A2D9DD /* CXXProxyKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CAEE9F250F9EB700A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitTests" */;
+			buildPhases = (
+				51CAEE93250F9EB700A2D9DD /* Sources */,
+				51CAEE94250F9EB700A2D9DD /* Frameworks */,
+				51CAEE95250F9EB700A2D9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CAEE9E250F9EB700A2D9DD /* PBXTargetDependency */,
 			);
 			name = CXXProxyKitTests;
 			productName = CXXProxyKitTests;
-			productReference = 51CAEE5A250F8DEF00A2D9DD /* CXXProxyKitTests.xctest */;
+			productReference = 51CAEE97250F9EB700A2D9DD /* CXXProxyKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +257,10 @@
 					51CAEE50250F8DEF00A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
 					};
-					51CAEE59250F8DEF00A2D9DD = {
+					51CAEE6F250F8EDA00A2D9DD = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					51CAEE96250F9EB700A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
@@ -167,7 +279,8 @@
 			projectRoot = "";
 			targets = (
 				51CAEE50250F8DEF00A2D9DD /* CXXProxyKit */,
-				51CAEE59250F8DEF00A2D9DD /* CXXProxyKitTests */,
+				51CAEE6F250F8EDA00A2D9DD /* CXXProxyKitMacOS */,
+				51CAEE96250F9EB700A2D9DD /* CXXProxyKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,10 +290,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5192EB922513D48E0022FE0F /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CAEE58250F8DEF00A2D9DD /* Resources */ = {
+		51CAEE6E250F8EDA00A2D9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CAEE95250F9EB700A2D9DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,29 +310,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5192EB8E2513CF6F0022FE0F /* Set Version From Git */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Version From Git";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/Scripts/version.sh\n";
+		};
+		5192EB8F2513CFBB0022FE0F /* Set Version From Git */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Version From Git";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/Scripts/version.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51CAEE4D250F8DEF00A2D9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FD119D250FA6CB008953B8 /* CXXProxyArray.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CAEE56250F8DEF00A2D9DD /* Sources */ = {
+		51CAEE6C250F8EDA00A2D9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51CAEE60250F8DEF00A2D9DD /* CXXProxyKitTests.m in Sources */,
+				51FD119E250FA6CB008953B8 /* CXXProxyArray.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CAEE93250F9EB700A2D9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5192EB8B251288110022FE0F /* CXXMutableProxyObjectTests.mm in Sources */,
+				51FD1197250FA393008953B8 /* CXXProxyObjectTests.mm in Sources */,
+				51FD11A8250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm in Sources */,
+				51A5C7942510C42C008B1610 /* CXXProxyPtrTests.mm in Sources */,
+				51A5C79F2511010E008B1610 /* CXXExampleProxy.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		51CAEE5D250F8DEF00A2D9DD /* PBXTargetDependency */ = {
+		51CAEE9E250F9EB700A2D9DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 51CAEE50250F8DEF00A2D9DD /* CXXProxyKit */;
-			targetProxy = 51CAEE5C250F8DEF00A2D9DD /* PBXContainerItemProxy */;
+			target = 51CAEE6F250F8EDA00A2D9DD /* CXXProxyKitMacOS */;
+			targetProxy = 51CAEE9D250F9EB700A2D9DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,6 +508,7 @@
 		51CAEE66250F8DEF00A2D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -343,6 +517,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CXXProxyKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +533,7 @@
 		51CAEE67250F8DEF00A2D9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -366,6 +542,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CXXProxyKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,37 +555,103 @@
 			};
 			name = Release;
 		};
-		51CAEE69250F8DEF00A2D9DD /* Debug */ = {
+		51CAEE82250F8EDA00A2D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
-				INFOPLIST_FILE = CXXProxyKitTests/Info.plist;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CXXProxyKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitMacOS;
+				PRODUCT_NAME = CXXProxyKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		51CAEE6A250F8DEF00A2D9DD /* Release */ = {
+		51CAEE83250F8EDA00A2D9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CXXProxyKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitMacOS;
+				PRODUCT_NAME = CXXProxyKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		51CAEEA0250F9EB700A2D9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HK3HZFEL95;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CXXProxyKitTests/**",
+				);
 				INFOPLIST_FILE = CXXProxyKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		51CAEEA1250F9EB700A2D9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HK3HZFEL95;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CXXProxyKitTests/**",
+				);
+				INFOPLIST_FILE = CXXProxyKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -433,11 +676,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51CAEE68250F8DEF00A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitTests" */ = {
+		51CAEE81250F8EDA00A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitMacOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51CAEE69250F8DEF00A2D9DD /* Debug */,
-				51CAEE6A250F8DEF00A2D9DD /* Release */,
+				51CAEE82250F8EDA00A2D9DD /* Debug */,
+				51CAEE83250F8EDA00A2D9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CAEE9F250F9EB700A2D9DD /* Build configuration list for PBXNativeTarget "CXXProxyKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CAEEA0250F9EB700A2D9DD /* Debug */,
+				51CAEEA1250F9EB700A2D9DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

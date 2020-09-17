@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char CXXProxyKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CXXProxyKit/PublicHeader.h>
 
+#import <CXXProxyKit/CXXProxyPtr.h>
+#import <CXXProxyKit/CXXProxyObject.h>
+#import <CXXProxyKit/CXXProxyArray.h>
 
