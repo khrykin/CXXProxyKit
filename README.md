@@ -42,7 +42,7 @@ And here is how we do it:
 
 /*
     This class represents the non-const part of C++ interface. 
-    It MUST be derived from the class above. 
+    It MUST be derived from it's non-mutable counterpart. 
 */
 
 @interface MutableExampleProxy : ExampleProxy <CXXMutableProxyObject>
