@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct CXXProxyListIterator<T>: IteratorProtocol {
+public struct CXXProxyArrayIterator<T>: IteratorProtocol {
     var fastEnumerator: NSFastEnumerationIterator
 
     public init(_ enumerable: NSFastEnumeration) {
@@ -22,12 +22,12 @@ public struct CXXProxyListIterator<T>: IteratorProtocol {
     public typealias Element = T
 }
 
-public protocol CXXProxyListSequence: NSFastEnumeration, Sequence {
+public protocol CXXProxyArraySequence: NSFastEnumeration, Sequence {
     associatedtype Element
 }
 
-extension CXXProxyListSequence  {
-    public func makeIterator() -> ProxyListIterator<Element> {
-        return ProxyListIterator<Element>(self)
+extension CXXProxyArraySequence  {
+    public func makeIterator() -> CXXProxyArrayIterator<Element> {
+        return CXXProxyArrayIterator<Element>(self)
     }
 }
