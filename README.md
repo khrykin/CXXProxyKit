@@ -119,7 +119,7 @@ auto &mutable_cxx_obj_ref = cxx::mutable_proxy_cast<cxx_example_object>(mutableP
 
 Note, that casts to Objective-C types create non-owning proxies, so you have to make sure that backing C++ objects will not be destroyed while any of it's proxies are still alive.
 
-## Making lightweight proxies for containers: 
+## Making Lightweight Proxies for C++ Containers: 
 
 ```Objective-C++
 
