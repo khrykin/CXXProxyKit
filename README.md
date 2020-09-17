@@ -128,9 +128,9 @@ Note, that casts to Objective-C types create non-owning proxies, so you have to 
 
 std::vector<cxx_example_object> objects;
 
-CXXNonOwningProxyArray<CXXExampleProxy> *objectsProxies = cxx::make_non_owning_proxy_array(objects, CXXExampleProxy.class);
+CXXNonOwningProxyArray<ExampleProxy> *objectsProxies = cxx::make_non_owning_proxy_array(objects, ExampleProxy.class);
 
-for (CXXExampleProxy *proxy: objectsProxies) {
+for (ExampleProxy *proxy: objectsProxies) {
     // Use proxy ...
 }
 
@@ -163,7 +163,7 @@ Then in Swift you have to conform it to `Sequence`:
 import CXXProxyKit
 
 extension ArraryOfProxies: CXXProxyListSequence {
-    public typealias Element = CXXExampleProxy
+    public typealias Element = ExampleProxy
 }
 
 ```
