@@ -131,3 +131,35 @@ for (CXXExampleProxy *proxy: objectsProxies) {
 }
 
 ```
+
+## Using Strongly Typed Collections in Swift
+
+Swift and Objective-C generic user types doesn't play very well together, so if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to define it's backing class explicitly like that:
+
+```Objective-C++
+
+#import <CXXProxyKit/CXXProxyKit.h>
+
+@interface ArraryOfProxies : NSObject <CXXArrayBackedProxyObject> CXX_PROXY_ARRAY_OF(CXXExampleProxy)
+
+@end
+
+@implementation CXX_ARRAY_BACKED_PROXY_OBJECT(ArraryOfProxies,
+                                              CXXExampleProxy,
+                                              std::vector<cxx_example_object>,
+                                              objects)
+
+@end
+
+```
+Then in Swift you have to conform it to `Sequence`:
+
+```Swift
+
+import CXXProxyKit
+
+extension ArraryOfProxies: ProxyListSequence {
+    public typealias Element = CXXExampleProxy
+}
+
+```
