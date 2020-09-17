@@ -144,12 +144,12 @@ Swift and Objective-C generic user types don't play very well together, so if yo
 
 #import <CXXProxyKit/CXXProxyKit.h>
 
-@interface ArraryOfProxies : NSObject <CXXArrayBackedProxyObject> CXX_PROXY_ARRAY_OF(CXXExampleProxy)
+@interface ArraryOfProxies : NSObject <CXXArrayBackedProxyObject> CXX_PROXY_ARRAY_OF(ExampleProxy)
 
 @end
 
 @implementation CXX_ARRAY_BACKED_PROXY_OBJECT(ArraryOfProxies,
-                                              CXXExampleProxy,
+                                              ExampleProxy,
                                               std::vector<cxx_example_object>,
                                               objects)
 
