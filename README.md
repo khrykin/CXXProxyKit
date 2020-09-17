@@ -2,7 +2,7 @@
 
 Objective-C framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
 
-## Example of Usage
+## Creating an Objective-C wrapper of C++ interface
 
 Here is the C++ interface that we want to wrap:
 
@@ -99,6 +99,8 @@ And here is how we do it:
 
 ```
 
+## Casting
+
 We can cast between C++ object and its Objective-C wrapper:
 
 ```Objective-C++
@@ -115,7 +117,9 @@ auto &mutable_cxx_obj_ref = cxx::mutable_proxy_cast<cxx_example_object>(mutableP
 
 ```
 
-Making lightweight proxies for containers: 
+Note, that casts to Objective-C types create non-owning proxies, so you have to make sure that backing C++ objects will not be destroyed while any of it's proxies are still alive.
+
+## Making lightweight proxies for containers: 
 
 ```Objective-C++
 
