@@ -72,7 +72,7 @@ And here is how we do it:
 }
 
 - (int)value {
-    // Note that we can only call non-const qualified methods of a C++ object whithin the implementation of this class.
+    // Note that we can only call const qualified methods of a C++ object whithin the implementation of this class.
     return obj->get_value();
 }
 
@@ -90,7 +90,7 @@ And here is how we do it:
 @dynamic value;
 
 - (void)setValue:(int)value {
-    // Here we can call a const-quialified method:
+    // Here we CAN call a non-const-quialified method:
     obj->set_value(value);
 }
 
