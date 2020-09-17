@@ -32,6 +32,7 @@ typedef NSUInteger (^CXXArraySizeGetter)(void);
                              countingBlock:(CXXArraySizeGetter)countingBlock;
 
 - (T)objectAtIndexedSubscript:(NSInteger)idx;
+- (NSArray<T> *)toArray;
 
 @end
 
@@ -97,7 +98,17 @@ ObjcType (CXXDummyCategory) @end                                                
       return [proxyArray countByEnumeratingWithState:state                              \
                                              objects:buffer                             \
                                                count:bufferSize];                       \
+}                                                                                       \
+                                                                                        \
+- (NSArray *)toArray {                                                                  \
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:self.count];       \
+        for (NSInteger idx = 0; idx < self.count; idx++) {                              \
+            [array addObject:[self objectAtIndexedSubscript:idx]];                      \
+        }                                                                               \
+                                                                                        \
+    return array;                                                                       \
 }
+
 
 NS_ASSUME_NONNULL_END
 
