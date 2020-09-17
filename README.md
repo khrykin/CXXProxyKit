@@ -158,7 +158,7 @@ Then in Swift you have to conform it to `Sequence`:
 
 import CXXProxyKit
 
-extension ArraryOfProxies: ProxyListSequence {
+extension ArraryOfProxies: CXXProxyListSequence {
     public typealias Element = CXXExampleProxy
 }
 
