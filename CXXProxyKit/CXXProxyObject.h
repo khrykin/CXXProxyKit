@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol CXXMutableProxyObject <CXXProxyObject>
 
 /**
- A mutalbe pointer to backing C++ object.
+ A mutalbe pointer to a backing C++ object.
  */
 @property (nonatomic, readonly) void *mutableImplementationPtr;
 

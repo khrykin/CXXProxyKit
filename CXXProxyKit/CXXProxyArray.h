@@ -22,6 +22,10 @@ typedef NSUInteger (^CXXArraySizeGetter)(void);
 
 @end
 
+@protocol CXXArrayBackedProxyObject <CXXProxyArray, CXXProxyObject>
+
+@end
+
 @interface CXXNonOwningProxyArray<T> : NSObject <CXXProxyArray>
 
 - (instancetype)initWithItemProxyAllocator:(CXXArrayElementProxyAllocator)itemProxyAllocator
@@ -30,6 +34,70 @@ typedef NSUInteger (^CXXArraySizeGetter)(void);
 - (T)objectAtIndexedSubscript:(NSInteger)idx;
 
 @end
+
+#define CXX_PROXY_ARRAY_OF(ObjcElementType)                                             \
+                                                                                        \
+- (ObjcElementType *)objectAtIndexedSubscript:(NSInteger)idx;
+
+#define CXX_ARRAY_BACKED_PROXY_OBJECT(ObjcType, ObjcElementType, CppType, IvarName)     \
+ObjcType (CXXDummyCategory) @end                                                        \
+                                                                                        \
+@interface ObjcType () {                                                                \
+    cxx::proxy_ptr<const CppType> IvarName;                                             \
+    CXXNonOwningProxyArray *proxyArray;                                                 \
+}                                                                                       \
+                                                                                        \
+@end                                                                                    \
+                                                                                        \
+@implementation ObjcType                                                                \
+                                                                                        \
+- (instancetype)initWithOwnedPtr:(const void *)ptr {                                    \
+    if (self = [super init]) {                                                          \
+        IvarName = cxx::make_proxy_ptr<CppType>(ptr, cxx::owning);                      \
+        proxyArray = cxx::make_non_owning_proxy_array(*IvarName, ObjcElementType.class);\
+        if ([self respondsToSelector:@selector(implementationDidLoad)]) {               \
+            [self implementationDidLoad];                                               \
+        }                                                                               \
+    }                                                                                   \
+                                                                                        \
+    return self;                                                                        \
+}                                                                                       \
+                                                                                        \
+- (instancetype)initWithUnownedPtr:(const void *)ptr {                                  \
+    if (self = [super init]) {                                                          \
+        IvarName = cxx::make_proxy_ptr<CppType>(ptr, cxx::non_owning);                  \
+        proxyArray = cxx::make_non_owning_proxy_array(*IvarName, ObjcElementType.class);\
+        if ([self respondsToSelector:@selector(implementationDidLoad)]) {               \
+            [self implementationDidLoad];                                               \
+        }                                                                               \
+    }                                                                                   \
+                                                                                        \
+    return self;                                                                        \
+}                                                                                       \
+                                                                                        \
+- (const void *)implementationPtr {                                                     \
+    return IvarName.get();                                                              \
+}                                                                                       \
+                                                                                        \
++ (NSUInteger)implementationSize {                                                      \
+    return sizeof(CppType);                                                             \
+}                                                                                       \
+                                                                                        \
+- (ObjcElementType *)objectAtIndexedSubscript:(NSInteger)idx {                          \
+    return proxyArray[idx];                                                             \
+}                                                                                       \
+                                                                                        \
+- (NSInteger)count {                                                                    \
+    return proxyArray.count;                                                            \
+}                                                                                       \
+                                                                                        \
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state               \
+                                  objects:(__unsafe_unretained id *)buffer              \
+                                    count:(NSUInteger)bufferSize {                      \
+      return [proxyArray countByEnumeratingWithState:state                              \
+                                             objects:buffer                             \
+                                               count:bufferSize];                       \
+}
 
 NS_ASSUME_NONNULL_END
 

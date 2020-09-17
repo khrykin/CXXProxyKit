@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5192EB8B251288110022FE0F /* CXXMutableProxyObjectTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */; };
 		5192EB922513D48E0022FE0F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5192EB912513D48E0022FE0F /* LICENSE */; };
+		5192EB942513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */; };
+		5192EB952513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */; };
 		51A5C7912510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51A5C7922510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51A5C7942510C42C008B1610 /* CXXProxyPtrTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */; };
@@ -41,6 +43,7 @@
 		5192EB8D2513CF4E0022FE0F /* version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = version.sh; sourceTree = "<group>"; };
 		5192EB902513D2460022FE0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5192EB912513D48E0022FE0F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CXXProxyArray+Sequence.swift"; sourceTree = "<group>"; };
 		51A5C7902510C091008B1610 /* CXXProxyPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXProxyPtr.h; sourceTree = "<group>"; };
 		51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXProxyPtrTests.mm; sourceTree = "<group>"; };
 		51A5C79B2511010E008B1610 /* cxx_example_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cxx_example_object.h; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 				51FD119B250FA6CB008953B8 /* CXXProxyArray.h */,
 				51FD1198250FA6CB008953B8 /* CXXProxyArray.mm */,
 				51A5C7902510C091008B1610 /* CXXProxyPtr.h */,
+				5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */,
 			);
 			path = CXXProxyKit;
 			sourceTree = "<group>";
@@ -256,9 +260,11 @@
 				TargetAttributes = {
 					51CAEE50250F8DEF00A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 					};
 					51CAEE6F250F8EDA00A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 					};
 					51CAEE96250F9EB700A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
@@ -355,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FD119D250FA6CB008953B8 /* CXXProxyArray.mm in Sources */,
+				5192EB942513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FD119E250FA6CB008953B8 /* CXXProxyArray.mm in Sources */,
+				5192EB952513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -526,6 +535,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -534,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -551,6 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -559,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -578,6 +592,8 @@
 				PRODUCT_NAME = CXXProxyKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -585,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -604,12 +621,14 @@
 				PRODUCT_NAME = CXXProxyKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		51CAEEA0250F9EB700A2D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -634,6 +653,7 @@
 		51CAEEA1250F9EB700A2D9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
