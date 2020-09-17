@@ -156,6 +156,13 @@ Swift and Objective-C generic user types don't play very well together, so unfor
 @end
 
 ```
+If you don't need any extra functionalilty from this class the code above can be replaced with a one-liner macro:
+
+```Objective-C++
+
+CXX_DEFINE_PROXY_ARRAY_TYPE(ArraryOfProxies, ExampleProxy, std::vector<cxx_example_object>)
+
+```
 
 Then in Swift you have to conform it to `CXXProxyArraySequence`:
 
