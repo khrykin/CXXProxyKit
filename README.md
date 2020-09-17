@@ -156,7 +156,7 @@ Swift and Objective-C generic user types don't play very well together, so if yo
 @end
 
 ```
-Then in Swift you have to conform it to `Sequence`:
+Then in Swift you have to conform it to `CXXProxyArraySequence`:
 
 ```Swift
 
