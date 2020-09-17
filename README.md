@@ -168,7 +168,7 @@ extension ArraryOfProxies: CXXProxyArraySequence {
 }
 
 ```
-Then, you'll be able to iterate through it and call subscript operator:
+Then, you'll be able to iterate through it and call a subscript operator:
 
 ```Swift
 
@@ -177,6 +177,8 @@ let arrayProxy = ArraryOfProxies()
 for (proxy in arrayProxy) {
     // proxy here is of type 'ExampleProxy'
 }
+
+let proxy = arrayProxy[2]
 
 ```
 
