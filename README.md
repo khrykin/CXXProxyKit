@@ -134,7 +134,7 @@ for (CXXExampleProxy *proxy: objectsProxies) {
 
 ## Using Strongly Typed Collections in Swift
 
-Swift and Objective-C generic user types doesn't play very well together, so if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to define it's backing class explicitly like that:
+Swift and Objective-C generic user types don't play very well together, so if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to define it's backing class explicitly like that:
 
 ```Objective-C++
 
