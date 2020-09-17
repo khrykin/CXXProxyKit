@@ -1,6 +1,6 @@
 #  CXXProxyKit
 
-Objective-C Framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
+Objective-C framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
 
 ## Example of Usage
 
