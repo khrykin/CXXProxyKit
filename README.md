@@ -1,6 +1,6 @@
 #  CXXProxyKit
 
-Objective-C Framework that helps to create Swift-friendly wrappers of C++ interfaces.
+Objective-C Framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
 
 ## Example of Usage
 
@@ -28,7 +28,7 @@ And here is how we do it:
 #import <CXXProxyKit/CXXProxyKit.h>
 
 /* 
-    This class represents the const part of C++ interface 
+    This class represents the const part of C++ interface:
 */
 
 @interface ExampleProxy : NSObject <CXXProxyObject>
@@ -68,11 +68,11 @@ And here is how we do it:
 
 - (void)implementationDidLoad {
     // This method is called after the initialization is done.
-    // You can use it do any additional setup, such as setting up some delegate or whatever.
+    // You can use it do any additional setup, such as setting up a delegate.
 }
 
 - (int)value {
-    // Note that we can only call non-const qualified methods of a C++ object.
+    // Note that we can only call non-const qualified methods of a C++ object whithin the implementation of this class.
     return obj->get_value();
 }
 
@@ -111,7 +111,7 @@ ExampleProxy *proxy = cxx::proxy_cast<ExampleProxy>(cxx_obj);
 MutableExampleProxy *mutableProxy = cxx::mutable_proxy_cast<ExampleProxy>(cxx_obj);
 
 const auto &cxx_obj_ref = cxx::proxy_cast<cxx_example_object>(proxy);
-auto &mutable_cxx_obj_ref = cxx::mutable_proxy_cast<cxx_example_object>(proxy);
+auto &mutable_cxx_obj_ref = cxx::mutable_proxy_cast<cxx_example_object>(mutableProxy);
 
 ```
 
