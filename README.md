@@ -1,6 +1,6 @@
 #  CXXProxyKit
 
-Objective-C framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
+Objective-C++ framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
 
 ## Creating an Objective-C wrapper of C++ interface
 
@@ -119,7 +119,7 @@ auto &mutable_cxx_obj_ref = cxx::mutable_proxy_cast<cxx_example_object>(mutableP
 
 Note, that casts to Objective-C types create non-owning proxies, so you have to make sure that backing C++ objects will not be destroyed while any of it's proxies are still alive.
 
-## Making Lightweight Proxies for C++ Containers: 
+## Making Lightweight Proxies for C++ Containers 
 
 ```Objective-C++
 
@@ -138,7 +138,7 @@ for (ExampleProxy *proxy: objectsProxies) {
 
 ## Using Strongly Typed Collections in Swift
 
-Swift and Objective-C generic user types don't play very well together, so if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to define it's backing class explicitly like that:
+Swift and Objective-C generic user types don't play very well together, so unfortunately, if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to do a bit of work and define it's backing class explicitly:
 
 ```Objective-C++
 
@@ -156,14 +156,37 @@ Swift and Objective-C generic user types don't play very well together, so if yo
 @end
 
 ```
+
 Then in Swift you have to conform it to `CXXProxyArraySequence`:
 
 ```Swift
 
 import CXXProxyKit
 
-extension ArraryOfProxies: CXXProxyArraySequence {
+extension ArrayOfProxies: CXXProxyArraySequence {
     public typealias Element = ExampleProxy
+}
+
+```
+Then, you'll be able to iterate through it and call a subscript operator:
+
+```Swift
+
+let arrayProxy = ArrayOfProxies()
+
+for (proxy in arrayProxy) {
+    // proxy here is of type 'ExampleProxy'
+}
+
+let proxy = arrayProxy[2]
+
+```
+
+Alternatively, you can call `toArray()` on the instance of `CXXNonOwningProxyArray` and cast element to a proxy type:
+```Swift
+
+for element in objectsProxies.toArray() {
+    let proxy = element as! ExampleProxy
 }
 
 ```
