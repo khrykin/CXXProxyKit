@@ -47,7 +47,7 @@ And here is how we do it:
 
 @interface MutableExampleProxy : ExampleProxy <CXXMutableProxyObject>
 
-@property (nonatomic) int value;
+@property (nonatomic) NSInteger value;
 
 @end
 
