@@ -11,6 +11,9 @@
 		5192EB922513D48E0022FE0F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5192EB912513D48E0022FE0F /* LICENSE */; };
 		5192EB942513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */; };
 		5192EB952513E07F0022FE0F /* CXXProxyArray+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */; };
+		5192EB972514A92B0022FE0F /* CXXArrayBackedProxyObjectTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB962514A92B0022FE0F /* CXXArrayBackedProxyObjectTests.mm */; };
+		5192EB9A2514ABB70022FE0F /* CXXArrayOfProxies.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB992514ABB70022FE0F /* CXXArrayOfProxies.mm */; };
+		5192EB9D2514AC830022FE0F /* CXXArrayBackedProxyObjectSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB9C2514AC830022FE0F /* CXXArrayBackedProxyObjectSwift.swift */; };
 		51A5C7912510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51A5C7922510C091008B1610 /* CXXProxyPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5C7902510C091008B1610 /* CXXProxyPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51A5C7942510C42C008B1610 /* CXXProxyPtrTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */; };
@@ -44,6 +47,11 @@
 		5192EB902513D2460022FE0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5192EB912513D48E0022FE0F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5192EB932513E07F0022FE0F /* CXXProxyArray+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CXXProxyArray+Sequence.swift"; sourceTree = "<group>"; };
+		5192EB962514A92B0022FE0F /* CXXArrayBackedProxyObjectTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXArrayBackedProxyObjectTests.mm; sourceTree = "<group>"; };
+		5192EB982514ABB70022FE0F /* CXXArrayOfProxies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXArrayOfProxies.h; sourceTree = "<group>"; };
+		5192EB992514ABB70022FE0F /* CXXArrayOfProxies.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXArrayOfProxies.mm; sourceTree = "<group>"; };
+		5192EB9B2514AC830022FE0F /* CXXProxyKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CXXProxyKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5192EB9C2514AC830022FE0F /* CXXArrayBackedProxyObjectSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXXArrayBackedProxyObjectSwift.swift; sourceTree = "<group>"; };
 		51A5C7902510C091008B1610 /* CXXProxyPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXXProxyPtr.h; sourceTree = "<group>"; };
 		51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CXXProxyPtrTests.mm; sourceTree = "<group>"; };
 		51A5C79B2511010E008B1610 /* cxx_example_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cxx_example_object.h; sourceTree = "<group>"; };
@@ -103,6 +111,8 @@
 				51A5C79B2511010E008B1610 /* cxx_example_object.h */,
 				51A5C79C2511010E008B1610 /* CXXExampleProxy.h */,
 				51A5C79D2511010E008B1610 /* CXXExampleProxy.mm */,
+				5192EB982514ABB70022FE0F /* CXXArrayOfProxies.h */,
+				5192EB992514ABB70022FE0F /* CXXArrayOfProxies.mm */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -147,10 +157,13 @@
 		51CAEE5E250F8DEF00A2D9DD /* CXXProxyKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				5192EB9C2514AC830022FE0F /* CXXArrayBackedProxyObjectSwift.swift */,
+				5192EB9B2514AC830022FE0F /* CXXProxyKitTests-Bridging-Header.h */,
 				5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */,
 				51A5C7932510C42C008B1610 /* CXXProxyPtrTests.mm */,
 				51FD1196250FA393008953B8 /* CXXProxyObjectTests.mm */,
 				51FD11A7250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm */,
+				5192EB962514A92B0022FE0F /* CXXArrayBackedProxyObjectTests.mm */,
 				51CAEEA6250F9FD300A2D9DD /* Info.plist */,
 				51A5C7982510F8E9008B1610 /* Support */,
 			);
@@ -268,6 +281,7 @@
 					};
 					51CAEE96250F9EB700A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 					};
 				};
 			};
@@ -379,7 +393,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5192EB8B251288110022FE0F /* CXXMutableProxyObjectTests.mm in Sources */,
+				5192EB9D2514AC830022FE0F /* CXXArrayBackedProxyObjectSwift.swift in Sources */,
 				51FD1197250FA393008953B8 /* CXXProxyObjectTests.mm in Sources */,
+				5192EB9A2514ABB70022FE0F /* CXXArrayOfProxies.mm in Sources */,
+				5192EB972514A92B0022FE0F /* CXXArrayBackedProxyObjectTests.mm in Sources */,
 				51FD11A8250FA7F1008953B8 /* CXXNonOwningProxyArrayTests.mm in Sources */,
 				51A5C7942510C42C008B1610 /* CXXProxyPtrTests.mm in Sources */,
 				51A5C79F2511010E008B1610 /* CXXExampleProxy.mm in Sources */,
@@ -630,6 +647,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -647,6 +665,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "CXXProxyKitTests/CXXProxyKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -655,6 +676,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HK3HZFEL95;
@@ -672,6 +694,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khrykin.CXXProxyKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "CXXProxyKitTests/CXXProxyKitTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

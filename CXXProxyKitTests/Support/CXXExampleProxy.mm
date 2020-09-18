@@ -17,8 +17,8 @@
 
 @implementation CXX_PROXY_OBJECT(CXXExampleProxy, cxx_example_object, obj)
 
-- (instancetype)initWithValue:(int)value {
-    return [self initWithOwnedPtr:new cxx_example_object{value}];
+- (instancetype)initWithValue:(NSInteger)value {
+    return [self initWithOwnedPtr:new cxx_example_object{static_cast<int>(value)}];
 }
 
 - (instancetype)initWithUnownedPtr:(const void *)ptr delegateCallback:(void (^)(void)) callback {
@@ -37,7 +37,7 @@
     }
 }
 
-- (int)value {
+- (NSInteger)value {
     return obj->value;
 }
 
@@ -48,8 +48,8 @@
 
 @dynamic value;
 
-- (void)setValue:(int)value {
-    obj->value = value;
+- (void)setValue:(NSInteger)value {
+    obj->value = static_cast<int>(value);
 }
 
 @end

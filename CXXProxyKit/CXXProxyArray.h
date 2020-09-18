@@ -108,15 +108,7 @@ ObjcType (CXXDummyCategory) @end                                                
                                                                                         \
     return array;                                                                       \
 }
-
-#define CXX_DEFINE_PROXY_ARRAY_TYPE(ObjcType, ObjcElementType, CppType)                         \
-@interface ObjcType : NSObject <CXXArrayBackedProxyObject> CXX_PROXY_ARRAY_OF(ObjcElementType)  \
-@end                                                                                            \
-@implementation CXX_ARRAY_BACKED_PROXY_OBJECT(ObjcType,                                         \
-                                              ObjcElementType,                                  \
-                                              CppType,                                          \
-                                              objects)                                          \
-@end                                                                                            \
+                                                                                        
 
 NS_ASSUME_NONNULL_END
 

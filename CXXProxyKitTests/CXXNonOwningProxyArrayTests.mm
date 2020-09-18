@@ -12,17 +12,6 @@
 #import "CXXExampleProxy.h"
 #import "cxx_example_object.h"
 
-@interface ArraryOfProxies : NSObject <CXXArrayBackedProxyObject> CXX_PROXY_ARRAY_OF(CXXExampleProxy)
-
-@end
-
-@implementation CXX_ARRAY_BACKED_PROXY_OBJECT(ArraryOfProxies,
-                                              CXXExampleProxy,
-                                              std::vector<cxx_example_object>,
-                                              objects)
-
-@end
-
 @interface CXXNonOwningProxyArrayTests : XCTestCase
 
 @end

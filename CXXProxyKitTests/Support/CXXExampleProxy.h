@@ -12,18 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CXXExampleProxy : NSObject <CXXProxyObject>
 
-@property (nonatomic, readonly) int value;
+@property (nonatomic, readonly) NSInteger value;
 
 - (instancetype)initWithUnownedPtr:(const void *)ptr delegateCallback:(void (^)(void)) callback;
 - (instancetype)initWithOwnedPtr:(const void *)ptr delegateCallback:(void (^)(void)) callback;
 
-- (instancetype)initWithValue:(int)value;
+- (instancetype)initWithValue:(NSInteger)value;
 
 @end
 
 @interface CXXMutableExampleProxy : CXXExampleProxy <CXXMutableProxyObject>
 
-@property (nonatomic) int value;
+@property (nonatomic) NSInteger value;
 
 @end
 
