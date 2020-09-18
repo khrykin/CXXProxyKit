@@ -19,6 +19,7 @@ typedef NSUInteger (^CXXArraySizeGetter)(void);
 @property (nonatomic, readonly) NSInteger count;
 
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
+- (NSArray *)toArray;
 
 @end
 
@@ -102,13 +103,13 @@ ObjcType (CXXDummyCategory) @end                                                
                                                                                         \
 - (NSArray *)toArray {                                                                  \
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:self.count];       \
-        for (NSInteger idx = 0; idx < self.count; idx++) {                              \
-            [array addObject:[self objectAtIndexedSubscript:idx]];                      \
-        }                                                                               \
+    for (NSInteger idx = 0; idx < self.count; idx++) {                                  \
+        [array addObject:[self objectAtIndexedSubscript:idx]];                          \
+    }                                                                                   \
                                                                                         \
     return array;                                                                       \
 }
-                                                                                        
+
 
 NS_ASSUME_NONNULL_END
 

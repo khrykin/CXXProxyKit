@@ -14,9 +14,13 @@ extension CXXArraryOfProxies : CXXProxyArraySequence {
 }
 
 class CXXArrayBackedProxyObjectSwift: XCTestCase {
+    var proxies: CXXArraryOfProxies!
+
+    override func setUp() {
+        proxies = CXXArraryOfProxiesMakeForTesting()
+    }
 
     func test_iteration() throws {
-       let proxies = CXXArraryOfProxiesMakeForTesting()
         var index = 0;
         for proxy in proxies {
             XCTAssertEqual(proxy.value, index)
@@ -24,6 +28,10 @@ class CXXArrayBackedProxyObjectSwift: XCTestCase {
         }
 
         XCTAssertEqual(index, 2)
+    }
+
+    func test_subscriptAccess() throws {
+        XCTAssertEqual(proxies[1].value, 1)
     }
 
 }

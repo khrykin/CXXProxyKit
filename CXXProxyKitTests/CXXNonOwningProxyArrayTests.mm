@@ -12,15 +12,23 @@
 #import "CXXExampleProxy.h"
 #import "cxx_example_object.h"
 
-@interface CXXNonOwningProxyArrayTests : XCTestCase
+@interface CXXNonOwningProxyArrayTests : XCTestCase {
+    std::vector<cxx_example_object> vec;
+}
 
 @end
 
 @implementation CXXNonOwningProxyArrayTests
 
+- (void)setUp {
+    vec = {
+        cxx_example_object{1},
+        cxx_example_object{2}
+    };
+}
+
 - (void)test_nonOwningArrayWithProxyClass {
-    std::vector<cxx_example_object> vec = {cxx_example_object{1}, cxx_example_object{2}};
-    __auto_type *proxyArray = cxx::make_non_owning_proxy_array(vec, CXXExampleProxy.class);
+    CXXNonOwningProxyArray *proxyArray = cxx::make_non_owning_proxy_array(vec, CXXExampleProxy.class);
 
     XCTAssertEqual(proxyArray.count, vec.size());
 
@@ -42,8 +50,6 @@
 }
 
 - (void)test_nonOwningArrayWithCustomAllocator {
-    std::vector<cxx_example_object> vec = {cxx_example_object{1}, cxx_example_object{2}};
-
     CXXNonOwningProxyArray *proxyArray = cxx::make_non_owning_proxy_array(vec, [](const cxx_example_object &obj) {
         return [[CXXExampleProxy alloc] initWithUnownedPtr:&obj];
     });
@@ -65,6 +71,20 @@
 
     // Check that element's proxy object was deallocated.
     XCTAssertNil(weakObj);
+}
+
+- (void)test_toArray {
+    CXXNonOwningProxyArray *proxyArray = cxx::make_non_owning_proxy_array(vec, CXXExampleProxy.class);
+
+    NSArray *nsArray = [proxyArray toArray];
+
+    XCTAssertEqual(nsArray.count, vec.size());
+
+    int index = 0;
+    for (CXXExampleProxy *obj in proxyArray) {
+        XCTAssertEqual(vec[index++].value, obj.value);
+    }
+
 }
 
 @end

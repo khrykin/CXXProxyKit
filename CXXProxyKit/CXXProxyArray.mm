@@ -81,4 +81,13 @@
     return indexInBuffer;
 }
 
+- (NSArray *)toArray {
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:self.count];
+    for (NSInteger idx = 0; idx < self.count; idx++) {
+        [array addObject:[self objectAtIndexedSubscript:idx]];
+    }
+
+    return array;
+}
+
 @end
