@@ -33,9 +33,9 @@ And here is how we do it:
 
 @interface ExampleProxy : NSObject <CXXProxyObject>
 
-@property (nonatomic, readonly) int value;
+@property (nonatomic, readonly) NSInteger value;
 
-- (instancetype)initWithValue:(int)value;
+- (instancetype)initWithValue:(NSInteger)value;
 
 @end
 
@@ -59,11 +59,11 @@ And here is how we do it:
 
 @implementation CXX_PROXY_OBJECT(ExampleProxy, cxx_example_object, obj)
 
-- (instancetype)initWithValue:(int)value {
+- (instancetype)initWithValue:(NSInteger)value {
     // We call 'initWithOwnedPtr:' initialzer to attach C++ object and take ownership of it.
     // Otherwise, if we don't want to take ownership, 'initWithUnownedPtr:' must be called.
     
-    return [self initWithOwnedPtr:new cxx_example_object{value}];
+    return [self initWithOwnedPtr:new cxx_example_object{static_cast<int>(value)}];
 }
 
 - (void)implementationDidLoad {
@@ -71,7 +71,7 @@ And here is how we do it:
     // You can use it do any additional setup, such as setting up a delegate.
 }
 
-- (int)value {
+- (NSInteger)value {
     // Note that we can only call const qualified methods of a C++ object whithin the implementation of this class.
     return obj->get_value();
 }
@@ -89,9 +89,9 @@ And here is how we do it:
 // Use getter from parent class
 @dynamic value;
 
-- (void)setValue:(int)value {
+- (void)setValue:(NSInteger)value {
     // Here we CAN call a non-const-quialified method:
-    obj->set_value(value);
+    obj->set_value(static_cast<int>(value));
 }
 
 @end
@@ -122,7 +122,7 @@ Note, that casts to Objective-C types create non-owning proxies, so you have to 
 ## Making Lightweight Proxies for C++ Containers 
 
 You can create proxies for any C++ container at runtime with `cxx::make_non_owning_proxy_array`. 
-The only requirement is that the container should have `begin()` and `end()` iterators, and it's Objective-C proxy class must be defined:
+The only requirement is that the container should have `begin()` and `end()` iterators, and it's element's Objective-C proxy class must be defined:
 
 ```Objective-C++
 
@@ -159,9 +159,9 @@ Swift and Objective-C generic user types don't play very well together, so unfor
 @end
 
 ```
-You can use this interface as a basis for a wrapper of your custom C++ container interface.
+You can use this interface as a basis for a wrapper of your custom C++ container interface, as it also conforms to `CXXProxyObject`.
 
-Then in Swift you have to conform it to `CXXProxyArraySequence`:
+Then in Swift you have to conform this class to `CXXProxyArraySequence`:
 
 ```Swift
 
