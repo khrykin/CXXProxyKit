@@ -121,6 +121,9 @@ Note, that casts to Objective-C types create non-owning proxies, so you have to 
 
 ## Making Lightweight Proxies for C++ Containers 
 
+You can create proxies for any C++ container at runtime with `cxx::make_non_owning_proxy_array`. 
+The only requirement is that the container should have `begin()` and `end()` iterators, and it's Objective-C proxy class must be defined:
+
 ```Objective-C++
 
 #import <CXXProxyKit/CXXProxyKit.h>
@@ -138,7 +141,7 @@ for (ExampleProxy *proxy: objectsProxies) {
 
 ## Using Strongly Typed Collections in Swift
 
-Swift and Objective-C generic user types don't play very well together, so unfortunately, if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to do a bit of work and define it's backing class explicitly:
+Swift and Objective-C generic user types don't play very well together, so unfortunately, if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to do a bit of work and define it's backing class explicitly using `CXXArrayBackedProxyObject` protocol:
 
 ```Objective-C++
 
@@ -156,13 +159,7 @@ Swift and Objective-C generic user types don't play very well together, so unfor
 @end
 
 ```
-If you don't need any extra functionalilty from this class the code above can be replaced with a one-liner macro:
-
-```Objective-C++
-
-CXX_DEFINE_PROXY_ARRAY_TYPE(ArraryOfProxies, ExampleProxy, std::vector<cxx_example_object>)
-
-```
+You can use this interface as a basis for a wrapper of your custom C++ container interface.
 
 Then in Swift you have to conform it to `CXXProxyArraySequence`:
 
