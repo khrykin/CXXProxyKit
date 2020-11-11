@@ -65,7 +65,9 @@
         // Fill in the stack array, either until we've provided all items from the list
         // or until we've provided as many items as the stack based buffer will hold.
         while ((currentItemIndex < [self count]) && (indexInBuffer < bufferSize)) {
-            buffer[indexInBuffer] = [self objectAtIndexedSubscript:currentItemIndex];
+            id element = [self objectAtIndexedSubscript:currentItemIndex];
+
+            buffer[indexInBuffer] = (__bridge id)CFAutorelease(CFBridgingRetain(element));
             currentItemIndex++;
 
             // We must return how many items are in state->itemsPtr.
