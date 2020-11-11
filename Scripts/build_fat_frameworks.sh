@@ -55,7 +55,7 @@ xcodebuild -quiet\
     -sdk "macosx" \
     clean build
 
-IOS_FRAMEWORK_PATH="${dataPath}/iphoneos/Build/Products/Release-iphoneos/$FRAMEWORK_NAME.framework/"
+IOS_FRAMEWORK_PATH="${dataPath}/iphoneeos/Build/Products/Release-iphoneos/$FRAMEWORK_NAME.framework/"
 SIMUTATOR_FRAMEWORK_PATH="${dataPath}/iphoneos/Build/Products/Release-iphonesimulator/$FRAMEWORK_NAME.framework/"
 
 IOS_BINARY_PATH="$IOS_FRAMEWORK_PATH/$FRAMEWORK_NAME"
