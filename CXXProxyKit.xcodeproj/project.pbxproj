@@ -6,20 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		5192EBA72514BB320022FE0F /* BuildReleases */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 5192EBA82514BB320022FE0F /* Build configuration list for PBXAggregateTarget "BuildReleases" */;
-			buildPhases = (
-				5192EBAB2514BB360022FE0F /* Build Fat Frameworks */,
-			);
-			dependencies = (
-			);
-			name = BuildReleases;
-			productName = BuildReleases;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		5192EB8B251288110022FE0F /* CXXMutableProxyObjectTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5192EB8A251288110022FE0F /* CXXMutableProxyObjectTests.mm */; };
 		5192EB922513D48E0022FE0F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5192EB912513D48E0022FE0F /* LICENSE */; };
@@ -289,9 +275,6 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Dmitry Khrykin";
 				TargetAttributes = {
-					5192EBA72514BB320022FE0F = {
-						CreatedOnToolsVersion = 11.7;
-					};
 					51CAEE50250F8DEF00A2D9DD = {
 						CreatedOnToolsVersion = 11.7;
 						LastSwiftMigration = 1170;
@@ -322,7 +305,6 @@
 				51CAEE50250F8DEF00A2D9DD /* CXXProxyKit */,
 				51CAEE6F250F8EDA00A2D9DD /* CXXProxyKitMacOS */,
 				51CAEE96250F9EB700A2D9DD /* CXXProxyKitTests */,
-				5192EBA72514BB320022FE0F /* BuildReleases */,
 			);
 		};
 /* End PBXProject section */
@@ -389,24 +371,6 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/Scripts/version.sh\n";
 		};
-		5192EBAB2514BB360022FE0F /* Build Fat Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Fat Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/Scripts/build_fat_frameworks.sh\" \"$SRCROOT/CXXProxyKit.xcodeproj\" \"$SRCROOT/Build\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -454,24 +418,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5192EBA92514BB320022FE0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HK3HZFEL95;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5192EBAA2514BB320022FE0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HK3HZFEL95;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		51CAEE63250F8DEF00A2D9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -765,15 +711,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5192EBA82514BB320022FE0F /* Build configuration list for PBXAggregateTarget "BuildReleases" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5192EBA92514BB320022FE0F /* Debug */,
-				5192EBAA2514BB320022FE0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		51CAEE4B250F8DEF00A2D9DD /* Build configuration list for PBXProject "CXXProxyKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
