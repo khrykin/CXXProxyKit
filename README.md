@@ -1,4 +1,4 @@
-#  CXXProxyKit
+#  CXXProxyKit ![Test](https://github.com/khrykin/CXXProxyKit/workflows/Tests/badge.svg)
 
 Objective-C++ framework that helps to create Swift-friendly Objective-C wrappers of C++ interfaces.
 
