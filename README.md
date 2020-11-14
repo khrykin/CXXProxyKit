@@ -42,7 +42,7 @@ And here is how we do it:
 
 /*
     This class represents the non-const part of C++ interface. 
-    It MUST be derived from it's non-mutable counterpart. 
+    It MUST be derived from its non-mutable counterpart. 
 */
 
 @interface MutableExampleProxy : ExampleProxy <CXXMutableProxyObject>
@@ -68,7 +68,7 @@ And here is how we do it:
 
 - (void)implementationDidLoad {
     // This method is called after the initialization is done.
-    // You can use it do any additional setup, such as setting up a delegate.
+    // You can use it to do any additional setup, such as setting up a delegate.
 }
 
 - (NSInteger)value {
@@ -141,7 +141,7 @@ for (ExampleProxy *proxy: objectsProxies) {
 
 ## Using Strongly Typed Collections in Swift
 
-Swift and Objective-C generic user types don't play very well together, so unfortunately, if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to do a bit of work and define it's backing class explicitly using `CXXArrayBackedProxyObject` protocol:
+Swift and Objective-C generic user types don't play very well together, so, unfortunately, if you want to be able to iterate through a proxy array in Swift using `for ... in` syntax, you have to do a bit of work and define it's backing class explicitly using `CXXArrayBackedProxyObject` protocol:
 
 ```Objective-C++
 
@@ -161,7 +161,7 @@ Swift and Objective-C generic user types don't play very well together, so unfor
 ```
 You can use this interface as a basis for a wrapper of your custom C++ container interface, as it also conforms to `CXXProxyObject`.
 
-Then in Swift you have to conform this class to `CXXProxyArraySequence`:
+Then in Swift, you have to conform this class to `CXXProxyArraySequence`:
 
 ```Swift
 
@@ -186,7 +186,7 @@ let proxy = arrayProxy[2]
 
 ```
 
-Alternatively, you can call `toArray()` on the instance of `CXXNonOwningProxyArray` and cast element to a proxy type:
+Alternatively, you can call `toArray()` on the instance of `CXXNonOwningProxyArray` and cast the element to a proxy type:
 ```Swift
 
 for element in objectsProxies.toArray() {
