@@ -25,4 +25,9 @@ jobs:
           xcodebuild -showsdks
           
       - name: Run Tests
-        run: xcodebuild -project CXXProxyKit.xcodeproj -scheme CXXProxyKit -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test
+        run: |
+          xcodebuild -project CXXProxyKit.xcodeproj \
+          -scheme CXXProxyKit \
+          -configuration Release \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO test | xcpretty
